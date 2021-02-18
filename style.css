@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+#wrap {
+  width: 50vw;
+}
+.input {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  border: 1px #dddddd solid;
+  outline: 0;
+}
+
+/* Новые */
+#input {
+  position: relative;
+
+  /* Стили который уже есть */
+  height: 40px;
+}
+
+#input.is-success input {
+  color: mediumseagreen;
+}
+
+#input.has-error input {
+  color: #ee4a55;
+  border-color: #ee4a55;
+}
+
+.input:focus {
+  border-color: #000;
+}
+
+.suggestion-container {
+  /* reset ul */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  max-height: 200px;
+  overflow-y: auto;
+
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.suggestion-container.is-empty {
+  color: rgba(238, 74, 85, 0.5);
+}
+
+.suggestion-item {
+  padding-left: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: 0;
+}
+
+.suggestion-item:hover,
+.suggestion-item:focus {
+  background-color: rgb(228, 228, 228);
+  outline: 0;
+}
+
+@media (max-width: 768px) {
+  .input {
+    padding-left: 35px;
+    border-radius: 40px;
+    border: 1px #ccc solid;
+    background: #eee;
+  }
+
+  #input.is-active .input {
+    border-radius: 20px 20px 0 0;
+  }
+}

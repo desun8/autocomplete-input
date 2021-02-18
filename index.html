@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Инпут с автокомплитом</title>
+</head>
+
+<body>
+<div id="wrap">
+  <p>Инпут с автокомплитом.<br> При вводе появляется список подходящих улиц.<br> Инпут считается валидным, только если его значение равно значению/значениям из предложенного списка.</p>
+  <div id="input" data-is-valid="false">
+    <input class="input" type="text" placeholder="Улица"/>
+    <ul class="suggestion-container"></ul>
+  </div>
+</div>
+</body>
+<script src="dist/bundle.js" defer></script>
+</html>
